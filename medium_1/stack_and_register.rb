@@ -46,15 +46,15 @@ def minilang(commands)
   commands = commands.split(' ')
   commands.each do |command|
     case command
-    when 'PUSH' then mini_push(register, stack)
-    when 'ADD' then register = mini_add(register, stack)
-    when 'SUB' then register = mini_sub(register, stack)
-    when 'MULT' then register = mini_mult(register, stack)
-    when 'DIV' then register = mini_div(register, stack)
-    when 'MOD' then register = mini_mod(register, stack)
-    when 'POP' then register = mini_pop(register, stack)
-    when 'PRINT' then mini_print(register)
-    else register = command.to_i
+    when 'PUSH'   then mini_push(register, stack)
+    when 'ADD'    then register = mini_add(register, stack)
+    when 'SUB'    then register = mini_sub(register, stack)
+    when 'MULT'   then register = mini_mult(register, stack)
+    when 'DIV'    then register = mini_div(register, stack)
+    when 'MOD'    then register = mini_mod(register, stack)
+    when 'POP'    then register = mini_pop(register, stack)
+    when 'PRINT'  then mini_print(register)
+    else               register = command.to_i
     end
   end
 end
